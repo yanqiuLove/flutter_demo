@@ -17,14 +17,12 @@ class BottomNavigationBarPageState extends State<BottomNavigationBarPage> {
     ThreePage()
   ];
 
-  @override
   bool get wantKeepAlive => true;
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-
       body: _pages[_current_index], //展示组件
       bottomNavigationBar: BottomNavigationBar(
           showSelectedLabels: true,
@@ -38,13 +36,11 @@ class BottomNavigationBarPageState extends State<BottomNavigationBarPage> {
             });
           },
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('第一页')),
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "第一页"),
+            BottomNavigationBarItem(icon: Icon(Icons.business), label: "第二页"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.business), title: Text('第二页')),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.my_location), title: Text('第三页')),
+                icon: Icon(Icons.my_location), label: "第三页"),
           ]),
     );
   }
 }
-
