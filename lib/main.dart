@@ -21,9 +21,12 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       navigatorKey: globalKey,
       title: 'Flutter Demo',
-      translations: Messages(), // 你的翻译
-      locale: Locale('zh', 'CN'), // 将会按照此处指定的语言翻译
-      fallbackLocale: Locale('en', 'US'), // 添加一个回调语言选项，以备上面指定的语言翻译不存在
+      translations: Messages(),
+      // 你的翻译
+      locale: Locale('zh', 'CN'),
+      // 将会按照此处指定的语言翻译
+      fallbackLocale: Locale('en', 'US'),
+      // 添加一个回调语言选项，以备上面指定的语言翻译不存在
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -48,6 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void _incrementCounter() {
     setState(() {
       _counter++;
+      debugPrint("sourcetree");
     });
   }
 
